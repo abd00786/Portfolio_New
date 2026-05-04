@@ -52,7 +52,7 @@
     "globals": "latest",
     "input-otp": "latest",
     "lucide-react": "^0.454.0",
-    "next": "latest",
+    "next": "15.5.8",
     "next-themes": "latest",
     "nodemailer": "latest",
     "react": "latest",
