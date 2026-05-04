@@ -387,7 +387,7 @@ export default function Home() {
               <span className="text-slate-300">Tailwind CSS</span>.
             </p>
             <p className="text-slate-600">
-              &copy; 2025 Abdul&apos;s Portfolio. All rights reserved.
+              &copy; 2026 Abdul&apos;s Portfolio. All rights reserved.
             </p>
           </footer>
         </main>
