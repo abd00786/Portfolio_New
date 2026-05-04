@@ -73,7 +73,7 @@ const projects = [
     title: "Job-Automate-Analytics",
     description:
       "An intelligent Python-based automation bot that automatically applies to jobs on Naukri.com. Features multi-keyword job search, smart chatbot handling, anti-detection measures, and generates ATS reports with skill gap analysis. Includes a desktop GUI for easy operation, application tracking, and Excel export.",
-    imageUrl: "/images/auto_apply_bot.png",
+    imageUrl: "https://www.pharmiweb.jobs/getasset/3a360c2b-7a7c-4267-b11e-cd772f65f5d8/",
     tags: ["Python", "Selenium", "CustomTkinter", "ReportLab", "Chrome Automation", "AI"],
     demoLink: "https://github.com/abd00786/Job-Automate-Analytics",
     detailsLink: "https://github.com/abd00786/Job-Automate-Analytics",
