@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Nav } from "@/components/nav"
 import { SocialLinks } from "@/components/social-links"
 import { ContactModal } from "@/components/contact-modal"
-import { ArrowUpRight, LinkIcon, Github, ExternalLink } from "lucide-react"
+import { ArrowUpRight, Github, ExternalLink } from "lucide-react"
 
 const projects = [
   {
@@ -50,13 +50,13 @@ const projects = [
   },
   {
     id: 5,
-    title: "Treasured Fragrances – Product Showcase & Admin Panel",
+    title: "Treasured Fragrances - Product Showcase & Admin Panel",
     description:
       "A MERN-based product showcase website built for a paid client, featuring a modern UI with Tailwind CSS and shadcn/ui. Users can browse fragrance products and directly redirect to WhatsApp for purchase inquiries. Includes a secure admin dashboard where the client can add, update, and delete products with real-time updates.",
     imageUrl: "/images/Treasured_Fragrances.png",
     tags: ["MERN", "React", "Tailwind CSS", "shadcn/ui", "Node.js", "Express", "MongoDB"],
     demoLink: "https://treasuredfragrances.in/",
-    detailsLink: "https://github.com/abd00786/treasuredfragrances"
+    detailsLink: "https://github.com/abd00786/treasuredfragrances",
   },
   {
     id: 6,
@@ -64,21 +64,9 @@ const projects = [
     description:
       "A fully functional MERN-based Helpdesk and Issue Management system. Features include ticket creation, assignment, status tracking, and real-time updates. Built with a modern UI using Tailwind CSS and shadcn/ui. It includes a secure admin dashboard with JWT authentication, role-based access, and complete CRUD operations for managing tickets. The system uses Express and MongoDB with proper MVC architecture, CORS handling, bcrypt for password hashing, and REST APIs for smooth communication between frontend and backend.",
     imageUrl: "/images/smarthelpdesk.png",
-    tags: [
-      "React",
-      "Tailwind CSS",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "JWT",
-      "REST API",
-      "MVC",
-      "CORS",
-      "bcrypt",
-      "ES6"
-    ],
+    tags: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "REST API", "MVC", "CORS", "bcrypt", "ES6"],
     demoLink: "https://smart-helpdesk-orpin.vercel.app/",
-    detailsLink: "https://github.com/abd00786/smart-helpdesk"
+    detailsLink: "https://github.com/abd00786/smart-helpdesk",
   },
   {
     id: 7,
@@ -89,8 +77,7 @@ const projects = [
     tags: ["Python", "Selenium", "CustomTkinter", "ReportLab", "Chrome Automation", "AI"],
     demoLink: "https://github.com/abd00786/Job-Automate-Analytics",
     detailsLink: "https://github.com/abd00786/Job-Automate-Analytics",
-  }
-
+  },
 ]
 
 const skills = [
@@ -110,7 +97,7 @@ const skills = [
 const certifications = [
   {
     title: "Artificial Intelligence - AI",
-    issuer: "United University,IBM",
+    issuer: "United University, IBM",
     link: "https://uniteduniversity.skillsnetwork.site/certificates/403ffded-3768-4155-99cd-9bf50bead0ba",
     date: "2025",
   },
@@ -120,9 +107,8 @@ const certifications = [
     link: "https://trainings.internshala.com/s/v/3636441/b5222566",
     date: "2025",
   },
-
   {
-    title: "Full Stack Development" ,
+    title: "Full Stack Development",
     issuer: "Internshala",
     link: "https://trainings.internshala.com/s/v/3635996/b7878ef5",
     date: "2025",
@@ -133,7 +119,6 @@ const certifications = [
     link: "https://courses.ibmcep.cognitiveclass.ai/certificates/89e25240266c48f78cd2385c40b6db28",
     date: "2025",
   },
-
   {
     title: "Data Science Foundations",
     issuer: "Great Learning",
@@ -146,7 +131,6 @@ const certifications = [
     link: "https://courses.ibmcep.cognitiveclass.ai/certificates/b10624f3f6b948d18754ecf9a6dd1184#",
     date: "2022",
   },
-
   {
     title: "Introduction to Python",
     issuer: "IBM",
@@ -172,7 +156,7 @@ export default function Home() {
             <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-300 sm:text-xl">
               Full Stack Web Developer
             </h2>
-            <p className="mt-4 max-w-xs leading-normal text-slate-400">
+            <p className="mt-4 max-w-xs leading-normal text-slate-400 text-justify hyphens-auto">
               I build accessible, pixel-perfect, and performant web experiences using the MERN stack.
             </p>
             <Nav />
@@ -182,27 +166,28 @@ export default function Home() {
 
         {/* Main Content */}
         <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
+
           {/* About Section */}
           <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me">
             <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
               <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">About</h2>
             </div>
             <div className="space-y-4 text-slate-400">
-              <p>
-                Hello! I’m <span className="text-slate-200">Abdul Ahad Siddiqui</span>, a passionate Full Stack Web
-                Developer. My journey began with a curiosity for how things work on the web, which evolved into a career
-                building robust applications using the <span className="font-medium text-slate-200">MERN stack</span>{" "}
-                (MongoDB, Express, React, Node.js).
+              <p className="text-justify hyphens-auto">
+                Hello! I&apos;m <span className="text-slate-200">Abdul Ahad Siddiqui</span>, a passionate Full Stack
+                Web Developer. My journey began with a curiosity for how things work on the web, which evolved into a
+                career building robust applications using the{" "}
+                <span className="font-medium text-slate-200">MERN stack</span> (MongoDB, Express, React, Node.js).
               </p>
-              <p>
-                I thrive on solving complex problems and creating intuitive, user-friendly interfaces. Whether it's
+              <p className="text-justify hyphens-auto">
+                I thrive on solving complex problems and creating intuitive, user-friendly interfaces. Whether it&apos;s
                 deploying a <span className="text-teal-300">scalable backend</span> or crafting a{" "}
                 <span className="text-teal-300">beautiful frontend</span> with Tailwind CSS, I enjoy every step of the
                 development process.
               </p>
-              <p>
-                When I'm not coding, you'll find me exploring AI tools, experimenting with new UI libraries, or learning
-                about the latest developments in tech.
+              <p className="text-justify hyphens-auto">
+                When I&apos;m not coding, you&apos;ll find me exploring AI tools, experimenting with new UI libraries,
+                or learning about the latest developments in tech.
               </p>
             </div>
           </section>
@@ -273,7 +258,9 @@ export default function Home() {
                         </a>
                       </div>
                     </h3>
-                    <p className="mt-2 text-sm leading-normal text-slate-400">{project.description}</p>
+                    <p className="mt-2 text-sm leading-normal text-slate-400 text-justify hyphens-auto">
+                      {project.description}
+                    </p>
                     <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
                       {project.tags.map((tag) => (
                         <li key={tag} className="mr-1.5 mt-2">
@@ -325,7 +312,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Certifications Section 2*/}
+          {/* Certifications Section */}
           <section
             id="certifications"
             className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
@@ -381,9 +368,9 @@ export default function Home() {
               <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Contact</h2>
             </div>
             <div className="text-center md:text-left">
-              <p className="mb-6 text-slate-400 max-w-sm">
-                I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll
-                try my best to get back to you!
+              <p className="mb-6 text-slate-400 max-w-sm text-justify hyphens-auto">
+                I&apos;m currently looking for new opportunities. Whether you have a question or just want to say hi,
+                I&apos;ll try my best to get back to you!
               </p>
               <button
                 onClick={() => setContactOpen(true)}
@@ -400,7 +387,7 @@ export default function Home() {
               <span className="text-slate-300">Tailwind CSS</span>.
             </p>
             <p className="text-slate-600">
-              &copy; 2025 Abdul's Portfolio. All rights reserved.
+              &copy; 2025 Abdul&apos;s Portfolio. All rights reserved.
             </p>
           </footer>
         </main>
