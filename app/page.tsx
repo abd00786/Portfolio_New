@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Nav } from "@/components/nav"
 import { SocialLinks } from "@/components/social-links"
 import { ContactModal } from "@/components/contact-modal"
-import { ArrowUpRight, LinkIcon } from "lucide-react"
+import { ArrowUpRight, LinkIcon, Github, ExternalLink } from "lucide-react"
 
 const projects = [
   {
@@ -79,6 +79,16 @@ const projects = [
     ],
     demoLink: "https://smart-helpdesk-orpin.vercel.app/",
     detailsLink: "https://github.com/abd00786/smart-helpdesk"
+  },
+  {
+    id: 7,
+    title: "Job-Automate-Analytics",
+    description:
+      "An intelligent Python-based automation bot that automatically applies to jobs on Naukri.com. Features multi-keyword job search, smart chatbot handling, anti-detection measures, and generates ATS reports with skill gap analysis. Includes a desktop GUI for easy operation, application tracking, and Excel export.",
+    imageUrl: "/images/auto_apply_bot.png",
+    tags: ["Python", "Selenium", "CustomTkinter", "ReportLab", "Chrome Automation", "AI"],
+    demoLink: "https://github.com/abd00786/Job-Automate-Analytics",
+    detailsLink: "https://github.com/abd00786/Job-Automate-Analytics",
   }
 
 ]
@@ -156,10 +166,10 @@ export default function Home() {
         {/* Header / Sidebar */}
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
           <div>
-            <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl hover:text-teal-300 transition-colors duration-300">
               <Link href="/">Abdul Ahad Siddiqui</Link>
             </h1>
-            <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+            <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-300 sm:text-xl">
               Full Stack Web Developer
             </h2>
             <p className="mt-4 max-w-xs leading-normal text-slate-400">
@@ -206,7 +216,7 @@ export default function Home() {
               {skills.map((skill) => (
                 <div
                   key={skill}
-                  className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 border border-teal-400/20 hover:border-teal-300/50 hover:bg-teal-400/15 transition-all duration-200"
+                  className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 border border-teal-400/20 hover:border-teal-300/60 hover:bg-teal-400/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(45,212,191,0.2)] transition-all duration-200 cursor-default"
                 >
                   {skill}
                 </div>
@@ -229,17 +239,18 @@ export default function Home() {
                   key={project.id}
                   className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 mb-12 last:mb-0"
                 >
-                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-xl transition-all duration-300 motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/60 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-xl"></div>
                   <header
                     className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
                     aria-label="Project Image"
                   >
-                    <div className="relative aspect-video w-full overflow-hidden rounded border border-slate-200/10 bg-slate-800 shadow-lg group-hover:shadow-xl group-hover:border-slate-200/20 transition-all duration-300">
+                    <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-slate-200/10 bg-slate-800 shadow-lg group-hover:shadow-teal-900/30 group-hover:shadow-xl group-hover:border-teal-400/20 transition-all duration-300">
                       <img
                         src={project.imageUrl || "/placeholder.svg"}
                         alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </header>
                   <div className="z-10 sm:col-span-6">
@@ -256,7 +267,7 @@ export default function Home() {
                           <span>
                             {project.title}
                             <span className="inline-block">
-                              <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1" />
+                              <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1 text-teal-300" />
                             </span>
                           </span>
                         </a>
@@ -266,7 +277,7 @@ export default function Home() {
                     <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
                       {project.tags.map((tag) => (
                         <li key={tag} className="mr-1.5 mt-2">
-                          <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 border border-teal-400/20 transition-all duration-200">
+                          <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 border border-teal-400/20 hover:border-teal-300/50 hover:bg-teal-400/15 transition-all duration-200">
                             {tag}
                           </div>
                         </li>
@@ -274,12 +285,20 @@ export default function Home() {
                     </ul>
                     <div className="mt-4 flex gap-4">
                       <a
+                        href={project.demoLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-xs font-medium text-slate-300 hover:text-teal-300 flex items-center gap-1 z-20 relative transition-colors duration-200"
+                      >
+                        <ExternalLink className="w-3 h-3" /> Live Demo
+                      </a>
+                      <a
                         href={project.detailsLink}
                         target="_blank"
                         rel="noreferrer"
                         className="text-xs font-medium text-slate-300 hover:text-teal-300 flex items-center gap-1 z-20 relative transition-colors duration-200"
                       >
-                        <LinkIcon className="w-3 h-3" /> Source Code
+                        <Github className="w-3 h-3" /> Source Code
                       </a>
                     </div>
                   </div>
@@ -288,7 +307,7 @@ export default function Home() {
             </div>
             <div className="mt-12">
               <a
-                className="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold group transition-colors duration-200"
+                className="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold group transition-colors duration-200 hover:text-teal-300"
                 aria-label="View Full Project Archive"
                 href="https://github.com/abd00786"
                 target="_blank"
@@ -362,26 +381,26 @@ export default function Home() {
               <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Contact</h2>
             </div>
             <div className="text-center md:text-left">
-              <p className="mb-4 text-slate-400">
+              <p className="mb-6 text-slate-400 max-w-sm">
                 I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll
                 try my best to get back to you!
               </p>
               <button
                 onClick={() => setContactOpen(true)}
-                className="inline-flex items-center justify-center rounded border border-teal-300 px-6 py-3 text-sm font-medium text-teal-300 transition-all duration-200 hover:bg-teal-300/10 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="inline-flex items-center justify-center rounded-lg border border-teal-300 px-8 py-3 text-sm font-semibold text-teal-300 transition-all duration-300 hover:bg-teal-300/10 hover:shadow-[0_0_20px_rgba(45,212,191,0.2)] hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
               >
                 Say Hello
               </button>
             </div>
           </section>
 
-          <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+          <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0 space-y-1">
             <p>
-              Designed and built with <span className="text-slate-200">Next.js</span> and{" "}
-              <span className="text-slate-200">Tailwind CSS</span>.
+              Designed and built with <span className="text-slate-300">Next.js</span> and{" "}
+              <span className="text-slate-300">Tailwind CSS</span>.
             </p>
-            <p className="text-gray-600">
-              &copy; 2025 Abdul'Portfolio  All rights reserved.
+            <p className="text-slate-600">
+              &copy; 2025 Abdul's Portfolio. All rights reserved.
             </p>
           </footer>
         </main>
